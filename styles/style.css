@@ -37,18 +37,7 @@ body{
     height: 500px;
     width: 800px;
 }
-.explore-btn{
-    width: 180px;
-    height: 64px;
-    font-weight: 600;
-    font-size: 20px;
-    border: none;
-    background-color: orange;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
+
 
 /* Main and Feature section style heare  */
 main{
@@ -72,17 +61,15 @@ main{
 .team-text-area{
     margin-left: 20px;
 }
-.text-gray{
-    color: gray;
-}
-.text-orange{
-    color: orange;
-}
+
 
 /* Feature Enjoy Section Style heare  */
 .feature-enjoy{
     margin-top: 100px;
     display: flex;
+}
+.feature-enjoy> div {
+    width: 50%;
 }
 .line-style{
     height: 120px;
@@ -102,3 +89,148 @@ main{
     display: grid;
     grid-template-rows: repeat(1,1fr);
 }
+.plane> div {
+    box-shadow: 1px 1px 1px 1px gray;
+    margin: 20px;
+    background-color:white;
+    border-radius: 5px;
+}
+.architect-img-area{
+    position: relative;
+}
+.architect-bottom-btn{
+    position: absolute;
+   bottom: 20px;
+    left: 50px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+}
+.architect-bottom-btn h1{
+    font-weight: 700;
+    font-size: 48px;
+}
+
+/* Working Expariance Informaton  style heare */
+.working-info > h1{
+    font-weight: 700;
+    font-size: 45px;
+}
+.exparience-info{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    
+}
+.exparieance{
+    border: 1px solid orange;
+    text-align: center;
+   background-color: white;
+   transition: all 2s;
+}
+.exparieance:hover{
+    background-color: orange;
+    scale: 1.2;
+    cursor: pointer;
+}
+.exparieance h1{
+   font-size: 45px;
+}
+.exparieance img {
+    margin-top: 5px;
+}
+.hover-hide{
+    display: none;
+}
+/* Sponser style heare  */
+.sponspor-img{
+    position: relative;
+
+}
+
+.sponspor-img:after{
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+  
+    background: linear-gradient(to bottom, rgba(163, 190, 206, 0.5) 0%,rgba(161, 155, 154, 0.5) 100%);
+}
+.sponspor{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+}
+
+/* Footer style heare  */
+
+footer{
+    padding: 150px;  
+    
+}
+.footer-style{
+    height: 60px;
+    text-align: center;
+}
+.footer-style p{
+    padding-top: 20px;
+}
+
+/* ------------------------------------ 
+Custom Css class Common style heare:- 
+----------------------------------------*/
+.text-gray{
+    color: gray;
+}
+.text-orange{
+    color: orange;
+}
+.font-size{
+    font-size: 45px;
+}
+.text-center{
+    text-align: center;
+}
+.btn-warning{
+    width: 180px;
+    height: 64px;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+
+/*----------------------- 
+Media Quary add website  
+------------------------*/
+
+
+ /* Mobile Device :// */
+ @media only screen and (max-width:576px) {
+    .sponspor,.exparience-info,.team-img{
+        grid-template-columns:repeat(1,1fr)
+    }
+    .feature-list-area,.navigation,.nav-link,.feature-enjoy{
+        flex-direction: column;
+    }
+    .architect-img{
+        width: 200px;
+    }
+    .architect-bottom-btn{
+        display: none;
+    }
+    .banner-img{
+        width: 100%;
+    }
+    .sponspor-img,.exparieance{
+        margin-bottom: 15px;
+    }
+ }
